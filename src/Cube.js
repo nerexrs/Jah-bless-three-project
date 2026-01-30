@@ -1,8 +1,8 @@
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
-export default cube;
 
+export default cube;
 /**
  * ¡Jah bless! Con mucho gusto te explico en detalle ese código.
 
