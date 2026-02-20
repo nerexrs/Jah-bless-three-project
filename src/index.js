@@ -7,6 +7,8 @@ import resize from "./Resize.js";
 import scene from "./Scene.js";
 import keyListener from './KeyListener.js';
 import './OrbitImplementation.js'
+import './StatsImplementation.js'
+import guiImplementation from "./GuiImplementation.js";
 scene.add(cube);
 camera.position.set(1, 2, 5);
 camera.lookAt(cube.position);
@@ -17,19 +19,11 @@ loopMachine.addCallback(() => {
 	
 	renderer.render(scene, camera);
 });
-
-let rotation = () => {
+// let rotation = () => {
 //   cube.rotation.x += 0.01;
 // 	cube.rotation.y += 0.01;
-}
-loopMachine.addCallback(rotation)
-
-
-let posmovement = () => {
-	cube.position.y += 0.01
-}
-
-
+// }
+// loopMachine.addCallback(rotation)
 
 
 
@@ -37,8 +31,17 @@ let posmovement = () => {
 
 
 loopMachine.start()
+
 keyListener.start()
 
+
+
+setTimeout(() => {
+	guiImplementation.start()
+}, 3000);
+// setTimeout(() => {
+// 	guiImplementation.stop()
+// }, 5000);
 
 
 // setTimeout(() => {

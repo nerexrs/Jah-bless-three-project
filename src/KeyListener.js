@@ -69,9 +69,6 @@ class KeyListener {
 
         // Notifica que la tecla cambió a no presionada
         // Envía un array con: [código de tecla, nuevo estado, objeto completo de teclas]
-        this.caster([e.keyCode, false, this.keys])
-        
-        // Evita el comportamiento predeterminado del navegador para esa tecla
         e.preventDefault()
         
         // Detiene la propagación del evento a otros elementos
