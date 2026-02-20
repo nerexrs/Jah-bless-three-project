@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -15,8 +17,8 @@ Analicemos línea por línea:
 
 const render = new THREE.WebGLRenderer({ antialias: true });
 
-Aquí se crea una nueva instancia del renderizador de Three.js (WebGLRenderer), que utiliza la tecnología WebGL del navegador para dibujar.
-El objeto { antialias: true } que se le pasa es para activar el "antialiasing". Esta es una técnica que suaviza los bordes de los objetos 3D para que no se vean pixelados o "con dientes de sierra", mejorando la calidad visual de la escena.
+Aquí se crea una nueva instancia del renderizador una técnica que suaviza los bordes de los objetos 3D para que no se vean pixelados o "con dientes de sierra", mejorando la calidad visual de la escena.de Three.js (WebGLRenderer), que utiliza la tecnología WebGL del navegador para dibujar.
+El objeto { antialias: true } que se le pasa es para activar el "antialiasing". Esta es 
 render.setSize(window.innerWidth, window.innerHeight);
 
 Esta línea establece el tamaño del lienzo (el área de dibujo) para que coincida con el tamaño de la ventana del navegador.
