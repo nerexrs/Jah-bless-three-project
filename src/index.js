@@ -1,3 +1,4 @@
+//Jah bless, fyah bun
 import camera from "./Camera.js";
 import cube from "./Cube.js";
 import light from "./Light.js";
