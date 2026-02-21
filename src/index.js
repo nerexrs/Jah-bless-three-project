@@ -20,11 +20,11 @@ loopMachine.addCallback(() => {
 	
 	renderer.render(scene, camera);
 });
-// let rotation = () => {
-//   cube.rotation.x += 0.01;
-// 	cube.rotation.y += 0.01;
-// }
-// loopMachine.addCallback(rotation)
+let rotation = () => {
+  cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+}
+loopMachine.addCallback(rotation)
 
 
 
