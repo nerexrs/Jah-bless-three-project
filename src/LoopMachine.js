@@ -8,8 +8,8 @@ class LoopMachine{
         this.callbacks.push(callback)
     }
     removeCallback(callback){
-        let index = this.callbacks.indexOf(callback)
-        this.callbacks.splice(index, 1)
+        let index = this.callbacks.indexOf(callback)        
+        if (index > -1) this.callbacks.splice(index, 1)
     }
     run() {
         if(!this.flag) return

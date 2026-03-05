@@ -17,6 +17,7 @@ class GuiImplementation{
         }
         this.gui.addColor(colorObj, 'colorParam').name("Jah bless, color").onChange(()=>{
             cube.material.color.set(colorObj.colorParam)
+            console.log(colorObj.colorParam)
         })
         const rotation = this.gui.addFolder("Rotation")
         rotation.add(cube.rotation, 'x', 0, Math.PI * 2).step(Math.PI / 180)
@@ -25,7 +26,7 @@ class GuiImplementation{
         
         const position  =this.gui.addFolder("Position")
         position.add(cube.position, "x").min(-10).max(10)
-        position.add(cube.position, "x").min(-10).max(10).step('0.5')
+        position.add(cube.position, "y").min(-10).max(10).step('0.5')
         position.add(cube.position, "z", -1, 1).step(1)
 
     }
