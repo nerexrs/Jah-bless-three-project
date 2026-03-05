@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import texture from './Texture.js';
+import terrain from './basic/Terrain.js';
 const geometry = new THREE.PlaneGeometry( 200, 200, 100, 100 );
 const material = new THREE.MeshBasicMaterial( 
   { color: 0xffffff, 
@@ -11,9 +12,10 @@ plane.rotation.x = Math.PI*.5
 let arr = plane.geometry.attributes.position.array
 let length = plane.geometry.attributes.position.array.length
 
+
+
 for (let index = 0; index < length/3; index++) {
-    arr[index*3+2] = 5*Math.sin(arr[index*3+1]/10)*Math.sin(arr[index*3+0]/10);
-    
+    arr[index*3+2] = terrain(arr, index)
 }
 
 

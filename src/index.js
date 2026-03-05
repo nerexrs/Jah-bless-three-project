@@ -1,14 +1,14 @@
 //Jah bless, fyah bun
-import camera from "./Camera.js";
+import camera from "./basic/Camera.js";
 import cube from "./Cube.js";
-import light from "./Light.js";
-import loopMachine from "./LoopMachine.js";
-import renderer from "./Renderer.js";
-import resize from "./Resize.js";
-import scene from "./Scene.js";
-import keyListener from './KeyListener.js';
-import './OrbitImplementation.js'
-import './StatsImplementation.js'
+import light from "./basic/Light.js";
+import loopMachine from "./basic/LoopMachine.js";
+import renderer from "./basic/Renderer.js";
+import resize from "./basic/Resize.js";
+import scene from "./basic/Scene.js";
+import keyListener from './basic/KeyListener.js';
+import './basic/OrbitImplementation.js'
+import './basic/StatsImplementation.js'
 import guiImplementation from "./GuiImplementation.js";
 import plane from "./Plane.js";
 scene.add(cube);
