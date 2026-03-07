@@ -1,5 +1,6 @@
-let terrain = (arr, index) => {
-  return 5*Math.sin(arr[index*3+1]/10)*Math.sin(arr[index*3+0]/10);
+let terrain = (x, y) => {
+
+  return 5*Math.sin(x/10)*Math.sin(y/10);
 }
 
 export default terrain

@@ -13,9 +13,19 @@ let arr = plane.geometry.attributes.position.array
 let length = plane.geometry.attributes.position.array.length
 
 
+//Jah bless, nos vemos en Uruguay su mansión que ya guardó
 
+// Jah bless, pongala cuando vuelva solo si sale y se cuida así como
+
+//Jah bless, por fin dejó de destruirse y plane land a las 13:39:47:54 Milisegundos del 5 de marzo del 2026
+// dejó plon y se cepilló y va a bañarse así sin plonearse
+
+// Jah bless, baño, ver si recojo fast una parte, taxi, llamar. 
 for (let index = 0; index < length/3; index++) {
-    arr[index*3+2] = terrain(arr, index)
+    // let x = 
+    // let y = 
+    arr[index*3+2] = terrain(arr[index*3+1], arr[index*3+0]
+    )
 }
 
 

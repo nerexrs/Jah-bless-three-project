@@ -11,6 +11,7 @@ import './basic/OrbitImplementation.js'
 import './basic/StatsImplementation.js'
 import guiImplementation from "./GuiImplementation.js";
 import plane from "./Plane.js";
+import lander from "./basic/Lander.js";
 scene.add(cube);
 scene.add(plane)
 camera.position.set(1, 2, 5);
@@ -34,13 +35,13 @@ let rotation = () => {
 
 
 loopMachine.start()
-
+lander.start(cube, 0.5)
 keyListener.start()
 
 
 
 setTimeout(() => {
-	// guiImplementation.start()
+	guiImplementation.start()
 }, 3000);
 // setTimeout(() => {
 // 	guiImplementation.stop()
