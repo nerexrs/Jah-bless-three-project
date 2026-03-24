@@ -8,7 +8,8 @@ const material = new THREE.MeshBasicMaterial(
     wireframe: false } );
 const plane = new THREE.Mesh( geometry, material );
 plane.rotation.x = Math.PI*.5
-
+plane.layers.enable(1)
+//Jah bless, ese enable es para poner objetos 3d en las capas correspondientes en este caso capa 1 plano y lo seteo en raycaster
 let arr = plane.geometry.attributes.position.array
 let length = plane.geometry.attributes.position.array.length
 
