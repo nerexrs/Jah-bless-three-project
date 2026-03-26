@@ -16,6 +16,8 @@ import rayLander from "./basic/RayLander.js";
 import cubeController from "./basic/CubeController.js";
 import rotationController from "./basic/RotationController.js";
 import moveController from "./basic/MoveController.js";
+import shadowcontroller from "./basic/ShadowController.js";
+import * as THREE from 'three';
 scene.add(cube);
 scene.add(plane)
 camera.position.set(1, 2, 5);
@@ -27,25 +29,34 @@ loopMachine.addCallback(() => {
 	
 	renderer.render(scene, camera);
 });
-let rotation = () => {
-  cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-}
-// loopMachine.addCallback(rotation)
-
-
-
 
 
 keyListener.start()
 loopMachine.start()
 rayLander.start(cube, 0.5)
 // cubeController.start(cube, 0.2)
-rotationController.start(cube, 0.05)
+rotationController.start(cube)
 moveController.start(cube, 0.3)
-setTimeout(() => {
-	guiImplementation.start()
-}, 3000);
+shadowcontroller.start(cube, light.children[0], new THREE.Vector3(5, 5, 5))
+// let rotation = () => {
+//   cube.rotation.x += 0.01;
+// 	cube.rotation.y += 0.01;
+// }
+// loopMachine.addCallback(rotation)
+
+
+
+
+// keyListener.start()
+// loopMachine.start()
+// rayLander.start(cube, 0.5)
+// // cubeController.start(cube, 0.2)
+// rotationController.start(cube, 0.05)
+// moveController.start(cube, 0.3)
+// setTimeout(() => {
+// 	guiImplementation.start()
+// }, 3000);
+// shadowcontroller.start(cube, light.children[0], new THREE.Vector3(5, 5, 5))
 // setTimeout(() => {
 // 	guiImplementation.stop()
 // }, 5000);

@@ -1,21 +1,28 @@
-import loopMachine from "./LoopMachine"
+import loopMachine from "./LoopMachine.js"
 
 class Shadowcontroller{
     constructor(){
-        this.target = null
+        this.mesh = null
         this.directionalLight = null
         
     }
-    start(target, directionalLight){
-        this.target = target
+    start(mesh, directionalLight, offset){
+        this.mesh = mesh
         this.directionalLight = directionalLight        
+        this.directionalLight.target = this.mesh        
+        this.offset = offset
         loopMachine.addCallback(this.run.bind(this))
     }
     stop(){
         loopMachine.removeCallback(this.run.bind(this))
     }
     run(){
-        
+        this.directionalLight.position.set(
+            this.mesh.position.x + this.offset.x,
+            this.mesh.position.y + this.offset.y,
+            this.mesh.position.z + this.offset.z,
+            
+        )
     }
 }
 

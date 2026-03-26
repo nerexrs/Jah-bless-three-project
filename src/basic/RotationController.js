@@ -4,11 +4,10 @@ import loopMachine from "./LoopMachine.js"
 class RotationController{
     constructor(){
         this.target = null
-        this.speed = null
+        this.speed = 0.08
     }
-    start(target, speed){
+    start(target){
         this.target = target
-        this.speed = speed
 
         loopMachine.addCallback(this.run.bind(this))
 

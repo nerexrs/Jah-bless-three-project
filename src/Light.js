@@ -13,7 +13,7 @@ directionalLight.castShadow = true
 directionalLight.shadow.mapSize.width = 512; // default
 directionalLight.shadow.mapSize.height = 512; // default
 directionalLight.shadow.camera.near = 3; // default
-directionalLight.shadow.camera.far = 10; // default
+directionalLight.shadow.camera.far = 20; // default
 
 const helper = new THREE.CameraHelper( directionalLight.shadow.camera );
 light.add( helper );

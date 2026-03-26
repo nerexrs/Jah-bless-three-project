@@ -2,12 +2,15 @@ import * as THREE from 'three';
 import texture from './Texture.js';
 import terrain from './basic/Terrain.js';
 const geometry = new THREE.PlaneGeometry( 200, 200, 100, 100 );
-const material = new THREE.MeshBasicMaterial( 
+const material = new THREE.MeshPhongMaterial( 
   { color: 0xffffff, 
     side: THREE.DoubleSide,
     wireframe: false } );
 const plane = new THREE.Mesh( geometry, material );
 plane.rotation.x = Math.PI*.5
+plane.castShadow = true;
+plane.receiveShadow = true;
+
 plane.layers.enable(1)
 //Jah bless, ese enable es para poner objetos 3d en las capas correspondientes en este caso capa 1 plano y lo seteo en raycaster
 let arr = plane.geometry.attributes.position.array

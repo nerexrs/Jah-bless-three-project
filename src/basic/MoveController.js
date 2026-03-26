@@ -4,12 +4,11 @@ import loopMachine from "./LoopMachine.js"
 class MoveController{
     constructor(){
         this.target = null
-        this.speed = 0.5 
+        this.speed = 0.53
         
     }
-    start(target, speed){
+    start(target){
         this.target = target
-        this.speed = speed
         loopMachine.addCallback(this.run.bind(this))
     }
     stop(){
