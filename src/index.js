@@ -38,6 +38,9 @@ rayLander.start(cube, 0.5)
 rotationController.start(cube)
 moveController.start(cube, 0.3)
 shadowcontroller.start(cube, light.children[0], new THREE.Vector3(5, 5, 5))
+setTimeout(() => {
+	guiImplementation.start()
+}, 3000);
 // let rotation = () => {
 //   cube.rotation.x += 0.01;
 // 	cube.rotation.y += 0.01;
