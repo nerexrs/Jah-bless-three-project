@@ -32,7 +32,7 @@ class RayLander{
         const intersected = this.raycaster.intersectObjects(scene.children, true)[0];
         if(intersected){
             // console.log(intersected);
-            this.mesh.position.y -= intersected.distance - this.distanceToGround
+            this.mesh.position.y = intersected.point.y + this.distanceToGround
             //Jah bless, ahora la posición de mi y es que de la distancia actual que esté mi cubo sumale la distancia del suelo en eeste caso 0.5
         }   //Jah bless, ahora si es posicion del cubo 0 - distancia interseccion 0 = -0-0.5 que es distancia del suelo -0(-0.5)= +0.5, 
 
@@ -48,3 +48,37 @@ class RayLander{
 
 const rayLander = new RayLander()
 export default rayLander
+
+
+//Jah bless, explicación de la lógica del raylander
+
+/*Jah bless
+Jah bless, ¿Por qué la nueva línea es DIFERENTE y ARREGLA la falsa caída?
+
+CÓDIGO ORIGINAL (rompe):
+
+
+this.mesh.position.y -= intersected.distance - this.distanceToGround
+intersected.distance = distancia del rayo (desde centro cubo → plano).
+Si cubo perfecto: distance = 0.5 → 0.5 - 0.5 = 0 → sin cambio ✓.
+Si cubo 0.1 arriba (distance=0.6): - (0.6-0.5) = -0.1 → baja 0.1 ✓.
+Si cubo 0.1 abajo (distance=0.4): - (0.4-0.5) = +0.1 → SUBE 0.1 ❌.
+Resultado: Fluctuación → oscila infinitamente (falsa caída).
+NUEVA LÍNEA (funciona):
+
+
+this.mesh.position.y = intersected.point.y + this.distanceToGround
+intersected.point.y = Y EXACTA del plano (ej: terreno ondulado devuelve 2.3).
++ 0.5 = centro cubo siempre preciso sobre plano (2.3 + 0.5 = 2.8).
+Iguala directo, no depende de posición anterior → 0 oscilación.
+Ejemplo numérico (terreno Y=1.2):
+
+Estado cubo	distance	Original (Y final)	Nueva (Y final)
+Perfecto (Y=1.7)	0.5	1.7 - 0 = 1.7 ✓	1.2 + 0.5 = 1.7 ✓
+Arriba (Y=1.8)	0.6	1.8 - 0.1 = 1.7 ✓	1.7 ✓
+Abajo (Y=1.6)	0.4	1.6 + 0.1 = 1.7 ✓? NO, aleja más!	1.7 ✓
+Diferencia clave: Original es "ajuste incremental inestable". Nueva es "set directo estable". ¡Jah bless, aterriza fijo!
+
+
+Start New Task
+Make */
