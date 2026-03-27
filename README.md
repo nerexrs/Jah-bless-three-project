@@ -1,9 +1,8 @@
 # Jah_bless-rebird_w--Three_Js
-# Jah_bless-rebird_w--Three_Js
-# Jah bless,8 horas, 44 minutos, 52 segundos, 372 milisegundos  cerró la pagina de controlar el tiempo y ya no es como controla el tiempo es demostrar que la hora a la que dijo ahora ´si cambió su vida efectivamente sea para cambiar su vida, adiós.
+Jah bless,8 horas, 44 minutos, 52 segundos, 372 milisegundos  cerró la pagina de controlar el tiempo y ya no es como controla el tiempo es demostrar que la hora a la que dijo ahora ´si cambió su vida efectivamente sea para cambiar su vida, adiós.
 
-# Jah bless, ya empecé solo hago un pull up a las: ![alt text](image.png)
-# Jah bless, empecé a las: 8 horas, 47 minutos, 46 segundos, 541 milisegundos
+ Jah bless, ya empecé solo hago un pull up a las: ![alt text](image.png)
+ Jah bless, empecé a las: 8 horas, 47 minutos, 46 segundos, 541 milisegundos
 
 # Jah bless, empecé a las:![alt text](image-1.png)
 
